@@ -1,46 +1,14 @@
-# Getting Started with Create React App
+Dockerizing your React app and opening it at 127.0.0.1:8083
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#say how to get here in the first place (configuring your project)
+To start, navigate to your root directory for the project you want to dockerize (presumably this repository) and run this command:
 
-## Available Scripts
+docker build -t peters-hayley-ui-garden .
 
-In the project directory, you can run:
+This will create an image from your Dockerfile. This image lays the foundation for a connection at 0.0.0.0:3000 . However, we don't want that. We also don't want the container to have a random name, so we'll enter this command to create the container:
 
-### `npm start`
+docker run --name peters-hayley-coding-assignment12 -p 127.0.0.1:8083:3000 peters-hayley-ui-garden
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It's pretty long, but it does exactly what we want it to. This command will allow you to run your dockerized React app on 127.0.0.1:8083 . Now you can open your Docker UI and open the port from there, or type 'localhost:8083' in your browser and your React app will pop up.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Happy coding!

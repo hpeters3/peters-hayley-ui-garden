@@ -1,23 +1,66 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*You submit DockerFile and README.md that has the instructions for how to get the site up and running on localhost:8083 (127.0.0.1:8083)
+Storybook functionality will include
+Controls’ to modify properties such as default text and background color
+All components will have a default state and a disabled state
+Components will visually change colour (I.e. greyed out) and the curser will indicate that the user cannot “click” on the component
+All components will have at least 2 tests
+A test that checks that the component is visible
+A test that checks that the background color changed when the component is in the ‘disabled’ state*/
+
+import React, { useState } from "react";
+import { Button } from './components/Button';
+import { Text } from './components/Text';
+import { Label } from './components/Label';
+import { Table } from './components/Table';
+import { Dropdown } from './components/Dropdown';
+import { Radio } from './components/Radio';
+import { Hero } from './components/Hero';
+import { Image } from './components/Image';
+import { Card } from './components/Card';
+import { Generic } from './Generic.styles.js';
+import fog from './images/fog.jpg';
+import hero from './images/hero.jpg';
+import doubt from './images/doubt.jpg';
 
 function App() {
+  const options = [
+    { value: 'going to click', label: 'Click' },
+    { value: 'not going to click', label: "Don't click" },
+  ];
+
+  function handleDropdownChange(value: string): void {
+    console.log('Selected option:', value);
+  }
+
+  const [selectedValue, setSelectedValue] = useState("");
+
+  const header: [string, string] = ["If you do:", "If you don't:"]
+  const body = [{ ifYouDo: "100% chance", ifYouDont: "0% chance" },];
+  const footer = "The decision should be obvious.";
+
+  const message = "Do you dare click the mystery button? Without guidance, it can take you anymore, leaving you lost in the web.";
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Generic>
+          <Hero src={hero} alt={"A hero image"}/>
+          <Button>{"Mystery Button"}</Button>
+          <Text message={message} />
+          <Label htmlFor="yesno" className="App-label">
+             Hmm... what are the chances of you getting lost if you click the mystery button?
+          </Label>
+          <Table headers={header} rows={body} footer={footer} />
+          <p>You don't want to be like this guy.</p>
+          <Image src={doubt} alt="doubt" />
+          <Dropdown options={options} onChange={handleDropdownChange}/>
+          <Radio selectedValue={selectedValue} onChange={setSelectedValue} />
+          <Card
+            imageSrc={fog}
+            imageAlt="Fog"
+            title="You Now Know What To Do"
+            description="Move forward with confidence in your decision. I hope you do not regret it."/>
+        </Generic>
       </header>
     </div>
   );
