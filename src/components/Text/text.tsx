@@ -1,9 +1,9 @@
 import type { TextProps } from './text.types';
 
-export function Text({message, backgroundColor, disabled}: TextProps)
+export function Text({message, disabled}: TextProps)
 {
   return (
-    <p style={{backgroundColor: disabled ? '#eee' : backgroundColor, cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1}}>
+    <p role="text" style={{backgroundColor: disabled ? '#eee' : 'white', cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1}}>
       {message}
     </p>
   );

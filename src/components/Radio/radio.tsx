@@ -1,8 +1,8 @@
 import type { RadioProps } from './radio.types';
 
-export function Radio({ selectedValue, onChange, backgroundColor, disabled }: RadioProps) {
+export function Radio({ selectedValue, onChange, disabled }: RadioProps) {
   return (
-    <div style={{backgroundColor: disabled ? '#eee' : backgroundColor, cursor: disabled ? 'not-allowed' : 'default', opacity: disabled ? 0.6 : 1}}>
+    <div role="radioButtons" style={{backgroundColor: disabled ? '#eee' : 'white', cursor: disabled ? 'not-allowed' : 'default', opacity: disabled ? 0.6 : 1}}>
 
         <input type="radio" id="yes" value="yes" checked={selectedValue === 'yes'} onChange={() => onChange?.('yes')} disabled={disabled} style={{cursor: disabled ? 'not-allowed' : 'default', opacity: disabled ? 0.6 : 1}}/>
 

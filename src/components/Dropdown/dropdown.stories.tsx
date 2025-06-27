@@ -31,7 +31,7 @@ export const Disabled: Story = {
       { label: 'Yes', value: 'going to click' },
       { label: 'No', value: 'not going to click' },
       ],
-    backgroundColor: 'white',
+    backgroundColor: '#eee',
     disabled: true,
   },
 };

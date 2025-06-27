@@ -1,10 +1,10 @@
 import type { CardProps } from './card.types';
 import { CardContainer, CardImage, CardTitle, CardDescription } from '../../Generic.styles.js';
 
-export function Card({imageSrc, imageAlt = "Image", title, description, backgroundColor, disabled,}: CardProps)
+export function Card({imageSrc, imageAlt = "Image", title, description, disabled,}: CardProps)
 {
   return (
-    <CardContainer style={{backgroundColor: disabled ? '#eee' : backgroundColor, cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1}}>
+    <CardContainer role="card" style={{backgroundColor: disabled ? '#eee' : 'white', cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1}}>
       <CardImage src={imageSrc} alt={imageAlt} />
       <div>
         <CardTitle>{title}</CardTitle>

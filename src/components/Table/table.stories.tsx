@@ -17,6 +17,7 @@ type Story = StoryObj<typeof Table>;
 export const Default: Story = {
   args: {
     rows: [{ ifYouDo: '100% chance', ifYouDont: '0%' },],
+    backgroundColor: "white",
     disabled: false,
   },
 };

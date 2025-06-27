@@ -18,6 +18,7 @@ type Story = StoryObj<typeof Text>;
 export const Default: Story = {
     args: {
       message: "Do you dare click the mystery button? Without guidance, it can take you anymore, leaving you lost in the web.",
+      backgroundColor: "white",
       disabled: false,
   },
 };

@@ -1,5 +1,5 @@
 export interface HeroProps {
-  src: string;
+  src?: string;
   alt?: string;
   backgroundColor?: string;
   disabled?: boolean;

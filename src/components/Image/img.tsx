@@ -1,10 +1,8 @@
 import type { ImageProps } from './img.types';
 
-export function Image({src, alt, backgroundColor, disabled}: ImageProps)
+export function Image({src, alt, disabled}: ImageProps)
 {
   return (
-    <div style={{backgroundColor: disabled ? '#ccc' : backgroundColor, cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1}}>
-      <img src={src} alt={alt} style={{opacity: disabled ? 0.5 : 1,}}/>
-    </div>
+    <img style={{backgroundColor: disabled ? '#eee' : 'white', cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1}}src={src} alt={alt}/>
   );
 }

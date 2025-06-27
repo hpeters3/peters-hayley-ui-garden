@@ -42,9 +42,8 @@ function App() {
         <Hero src={hero} alt={"A hero image"} disabled={true}/>
         <Button label="Mystery Button" disabled={true}/>
         <Text message={message} disabled={true}/>
-        <Label htmlFor="yesno" disabled={true}>Hmm... what are the chances of you getting lost if you click the mystery button?</Label>
+        <Label disabled={true}>Hmm... what are the chances of you getting lost if you click the mystery button?</Label>
         <Table headers={header} rows={body} footer={footer} disabled={true}/>
-        <p>You don't want to be like this guy.</p>
         <Image src={doubt} alt="doubt" disabled={true}/>
         <Dropdown options={options} onChange={handleDropdownChange} disabled={true}/>
         <Radio selectedValue={selectedValue} onChange={setSelectedValue} disabled={true}/>

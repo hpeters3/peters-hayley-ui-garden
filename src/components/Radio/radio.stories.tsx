@@ -16,6 +16,7 @@ type Story = StoryObj<typeof Radio>;
 
 export const Default: Story = {
     args: {
+      backgroundColor: "white",
       disabled: false,
   },
 };

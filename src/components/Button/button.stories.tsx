@@ -18,6 +18,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
     args: {
     label: "Mystery Button",
+    backgroundColor: "white",
     disabled: false,
   },
 };
@@ -25,7 +26,7 @@ export const Default: Story = {
 export const Disabled: Story = {
   args: {
     label: "Mystery Button",
-    backgroundColor: '#ccc',
+    backgroundColor: '#eee',
     disabled: true,
   },
 };

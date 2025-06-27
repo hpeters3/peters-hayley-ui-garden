@@ -16,13 +16,14 @@ type Story = StoryObj<typeof Card>;
 
 export const Default: Story = {
   args: {
+    backgroundColor: "white",
     disabled: false,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    backgroundColor: '#ccc',
+    backgroundColor: '#eee',
     disabled: true,
   },
 };

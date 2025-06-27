@@ -1,10 +1,9 @@
 import type { TableProps } from './table.types';
 import { TableCentered } from '../../Generic.styles.js';
 
-export function Table({ headers = ["If you do:", "If you don't:"], rows, footer, backgroundColor, disabled }: TableProps) {
+export function Table({ headers = ["If you do:", "If you don't:"], rows, footer, disabled }: TableProps) {
   return (
-    <TableCentered style={{backgroundColor: disabled ? '#eee' : backgroundColor || 'transparent', cursor: disabled ? 'not-allowed' : 'default', opacity: disabled ? 0.6 : 1}}>
-    <table>
+    <TableCentered style={{backgroundColor: disabled ? '#eee' : 'white', cursor: disabled ? 'not-allowed' : 'default', opacity: disabled ? 0.6 : 1}}>
       <thead>
         <tr>
           <th>{headers[0]}</th>
@@ -24,7 +23,6 @@ export function Table({ headers = ["If you do:", "If you don't:"], rows, footer,
           <td colSpan={2}>{footer}</td>
         </tr>
       </tfoot>
-    </table>
     </TableCentered>
   );
 }

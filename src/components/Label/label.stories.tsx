@@ -18,6 +18,7 @@ type Story = StoryObj<typeof Label>;
 export const Default: Story = {
     args: {
       children: "Hmm... what are the chances of you getting lost if you click the mystery button?",
+      backgroundColor: "white",
       disabled: false,
   },
 };
