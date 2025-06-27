@@ -1,8 +1,3 @@
-/*You submit DockerFile and README.md that has the instructions for how to get the site up and running on localhost:8083 (127.0.0.1:8083)
-All components will have at least 2 tests
-A test that checks that the component is visible
-A test that checks that the background color changed when the component is in the ‘disabled’ state*/
-
 import React, { useState } from "react";
 import { Button } from './components/Button';
 import { Text } from './components/Text';

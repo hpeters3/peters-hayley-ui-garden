@@ -1,7 +1,6 @@
 Dockerizing your React app and opening it at 127.0.0.1:8083
 
-#say how to get here in the first place (configuring your project)
-To start, navigate to your root directory for the project you want to dockerize (presumably this repository) and run this command:
+Download this respository, then open your command prompt in that file location. Once there, run this command:
 
 docker build -t peters-hayley-ui-garden .
 
