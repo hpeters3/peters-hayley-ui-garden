@@ -1,6 +1,5 @@
-import React from 'react';
-
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'disabled';
-  children: React.ReactNode;
+export interface ButtonProps {
+  label?: string;
+  backgroundColor?: string;
+  disabled?: boolean;
 }

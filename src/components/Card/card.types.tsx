@@ -1,10 +1,11 @@
 import React from 'react';
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'disabled';
+export interface CardProps {
   children?: React.ReactNode;
   imageSrc: string;
   imageAlt?: string;
   title: string;
   description: string;
+  backgroundColor?: string;
+  disabled?: boolean;
 }

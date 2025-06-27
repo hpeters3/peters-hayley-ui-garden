@@ -1,8 +1,4 @@
 /*You submit DockerFile and README.md that has the instructions for how to get the site up and running on localhost:8083 (127.0.0.1:8083)
-Storybook functionality will include
-Controls’ to modify properties such as default text and background color
-All components will have a default state and a disabled state
-Components will visually change colour (I.e. greyed out) and the curser will indicate that the user cannot “click” on the component
 All components will have at least 2 tests
 A test that checks that the component is visible
 A test that checks that the background color changed when the component is in the ‘disabled’ state*/
@@ -41,27 +37,19 @@ function App() {
   const message = "Do you dare click the mystery button? Without guidance, it can take you anymore, leaving you lost in the web.";
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Generic>
-          <Hero src={hero} alt={"A hero image"}/>
-          <Button>{"Mystery Button"}</Button>
-          <Text message={message} />
-          <Label htmlFor="yesno" className="App-label">
-             Hmm... what are the chances of you getting lost if you click the mystery button?
-          </Label>
-          <Table headers={header} rows={body} footer={footer} />
-          <p>You don't want to be like this guy.</p>
-          <Image src={doubt} alt="doubt" />
-          <Dropdown options={options} onChange={handleDropdownChange}/>
-          <Radio selectedValue={selectedValue} onChange={setSelectedValue} />
-          <Card
-            imageSrc={fog}
-            imageAlt="Fog"
-            title="You Now Know What To Do"
-            description="Move forward with confidence in your decision. I hope you do not regret it."/>
-        </Generic>
-      </header>
+    <div>
+      <Generic>
+        <Hero src={hero} alt={"A hero image"} disabled={true}/>
+        <Button label="Mystery Button" disabled={true}/>
+        <Text message={message} disabled={true}/>
+        <Label htmlFor="yesno" disabled={true}>Hmm... what are the chances of you getting lost if you click the mystery button?</Label>
+        <Table headers={header} rows={body} footer={footer} disabled={true}/>
+        <p>You don't want to be like this guy.</p>
+        <Image src={doubt} alt="doubt" disabled={true}/>
+        <Dropdown options={options} onChange={handleDropdownChange} disabled={true}/>
+        <Radio selectedValue={selectedValue} onChange={setSelectedValue} disabled={true}/>
+        <Card imageSrc={fog} imageAlt="Fog" title="You Now Know What To Do" description="Move forward with confidence in your decision. I hope you do not regret it." disabled={true}/>
+      </Generic>
     </div>
   );
 }

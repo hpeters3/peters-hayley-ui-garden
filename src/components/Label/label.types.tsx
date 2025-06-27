@@ -1,6 +1,8 @@
 import React from 'react';
 
-export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
-    variant?: 'default' | 'disabled';
+export interface LabelProps{
     children: React.ReactNode;
+    backgroundColor?: string;
+    disabled?: boolean;
+    htmlFor?: string;
 }

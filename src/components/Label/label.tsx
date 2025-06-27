@@ -1,9 +1,10 @@
 import type { LabelProps } from './label.types';
 
-export function Label({ htmlFor, children, className }: LabelProps) {
+export function Label({htmlFor, children, backgroundColor, disabled}: LabelProps)
+{
   return (
-    <div className={className}>
-      <label htmlFor={htmlFor}>{children}</label>
-    </div>
+    <label style={{backgroundColor: disabled ? '#eee' : backgroundColor, cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1}}>
+      {children}
+    </label>
   );
 }
