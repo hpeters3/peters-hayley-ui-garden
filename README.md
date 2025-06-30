@@ -2,7 +2,7 @@ Dockerizing your React app and opening it at 127.0.0.1:8083
 
 Download this respository, then open your command prompt in that file location. Once there, run this command:
 
-docker build -t peters-hayley-ui-garden .
+docker build -t peters_hayley_ui_garden .
 
 This will create an image from your Dockerfile. This image lays the foundation for a connection at 0.0.0.0:3000 . However, we don't want that. We also don't want the container to have a random name, so we'll enter this command to create the container:
 
